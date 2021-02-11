@@ -1,4 +1,19 @@
-ALLOWED_HOSTS = ["*"]
+DEBUG = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+
+STATIC_ROOT = '/app/static/'
+MEDIA_ROOT = '/app/static/media/'
+ALLOWED_HOSTS = ['*']
 
 # Modules in use, commented modules that you won't use
 MODULES = [
@@ -25,17 +40,6 @@ APIS = {
     'store': BASEURL,
     'visualizer': BASEURL,
     'voting': BASEURL,
-}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'decidedb',
-        'USER': 'decide',
-        'PASSWORD': 'decide2020',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
 }
 
 USE_X_FORWARDED_HOST = True
