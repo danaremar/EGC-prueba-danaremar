@@ -37,3 +37,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
