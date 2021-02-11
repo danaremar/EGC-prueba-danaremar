@@ -16,4 +16,4 @@ install:
   - pip install codacy-coverage
 script:
   - cd decide
-  - python manage.py test store
+  - python ./manage.py test store
